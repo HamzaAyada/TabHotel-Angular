@@ -1,0 +1,8 @@
+<ng-container>
+  <ul>
+    <li *ngFor="let item of menu" (click)="sendEvent(item)">
+        <a >{{item.name}}</a>
+        <app-menu *ngIf="item.submenus" [menu]="item.submenus"></app-menu>
+    </li>
+  </ul>
+</ng-container>
